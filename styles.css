@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+#check{
+    display: none;
+}
+
+nav {
+  background-color: #333;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+}
+
+nav label.logo {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+nav ul.menu {
+  display: flex;
+  list-style: none;
+}
+
+nav ul.menu li a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  transition: all 0.3s ease;
+}
+
+nav ul.menu li a:hover {
+  background-color: #555;
+}
+
+nav .checkbtn {
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+  display: none;
+}
+
+nav .checkbtn .hamburger {
+  display: block;
+  width: 30px;
+  height: 3px;
+  background-color: white;
+  margin-bottom: 5px;
+}
+
+
+@media (max-width: 800px) {
+  nav label.logo {
+    font-size: 20px;
+  }
+  
+  nav ul.menu {
+    position: fixed;
+    top: 60px;
+    left: -100%;
+    width: 100%;
+    height: 90vh;
+    background-color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    transition: all 0.3s ease;
+  }
+  
+  nav ul.menu li {
+    width: 100%;
+    text-align: center;
+  }
+  
+  nav ul.menu li a {
+    width: 100%;
+    padding: 20px;
+  }
+  
+  nav .checkbtn {
+    display: block;
+  }
+
+  .checkbtn .hamburger {
+    background-color: white;
+  }
+  
+  #check:checked ~ ul.menu {
+    left: 0;
+  }
+}
